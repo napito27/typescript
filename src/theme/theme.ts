@@ -1,6 +1,40 @@
-import { createTheme } from "@mui/material";
+import { createTheme, darken } from "@mui/material";
 
 const theme = createTheme({
+  components: {
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          primary: '#004d40',
+          color: '#ffffff'
+        }
+      }      
+    },
+    MuiButton: {
+      styleOverrides: {
+        containedPrimary: {
+          background: '#00796b',
+          color: '#ffffff',
+          '&:hover': {
+            background: darken('#00796b', 0.15),
+          }
+        },
+      }
+    },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          background: '#00796b',
+          color: '#ffffff',
+        },
+        outlined: {
+          background: 'transparent',
+          borderColor: '#ffab00',
+          color: '#ffab00'
+        }
+      }
+    },
+  },
   palette: {
     primary: {
       main: '#00796b'
@@ -15,11 +49,16 @@ const theme = createTheme({
   typography: {
     fontFamily: [
       'Roboto',
-      '"Helvetica Neue"',
+      'Helvetica',
       'Arial',
       'sans-serif',
     ].join(','),
+    fontSize: 16,
+    body1: {
+      fontWeight: 500,
+    }
   },
 });
+console.log(theme);
 
 export default theme;
