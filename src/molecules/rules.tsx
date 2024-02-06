@@ -1,4 +1,5 @@
-import {Box, Chip, IconButton, Typography, Tooltip} from '@mui/material';
+import {Box, Chip, IconButton, Typography, Tooltip, Button} from '@mui/material';
+
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 
 function Spacer({width = 10}) {
@@ -14,15 +15,20 @@ interface RuleProps {
 }
 
 function Rules({rule, contains, values = [], infoText, showInfoicon = false}: RuleProps) {
+  
   return ( 
-    <Box display='flex' alignItems='center' style={{margin: 10}}>
+    <Box 
+      display='flex' 
+      alignItems='center' 
+      style={{margin: 'auto', padding: '2rem', width: '600px'}}
+    >
       <Typography fontWeight='bold' variant='body1'>
         IF
       </Typography>
       <Spacer width={10}/>
-      <Chip label={rule}/>
+      <Chip label={rule} variant='outlined'/>
       <Spacer width={10}/>
-      <Chip label={contains}/>
+      <Chip label={contains} variant='outlined'/>
       <Spacer width={10}/>
       {values.map((item, index) => (
         <>
