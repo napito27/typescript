@@ -1,4 +1,4 @@
-import {Box, Chip, IconButton, Typography, Tooltip, Button} from '@mui/material';
+import {Box, Chip, IconButton, Typography, Tooltip} from '@mui/material';
 
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 

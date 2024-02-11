@@ -1,4 +1,4 @@
-import { createTheme, darken } from "@mui/material";
+import { createTheme, darken, lighten } from "@mui/material";
 
 const theme = createTheme({
   components: {
@@ -18,6 +18,14 @@ const theme = createTheme({
           '&:hover': {
             background: darken('#00796b', 0.15),
           }
+        },
+      }
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          background: lighten('#777', 0.80),
+          color: '#00796b',
         },
       }
     },
